@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RION MODS - Web Controller</title>
+    <style>
+        body {
+            background-color: #0A0A12;
+            color: #00E5FF;
+            font-family: monospace;
+            padding: 2rem;
+            margin: 0;
+        }
+        h1 {
+            color: #D50000;
+        }
+        .panel {
+            background-color: #161622;
+            border: 1px solid #B388FF;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #00E5FF;
+            color: #0A0A12;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #00B8D4;
+        }
+        .danger {
+            background-color: #D50000;
+            color: white;
+        }
+        .danger:hover {
+            background-color: #B71C1C;
+        }
+        #log {
+            height: 200px;
+            overflow-y: auto;
+            background: #000;
+            padding: 1rem;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>RION MODS</h1>
+    
+    <div class="panel">
+        <h2>Connection</h2>
+        <p>Status: <span id="status">Disconnected</span></p>
+        <button onclick="checkHealth()">Check Server Health</button>
+        <button onclick="createPairing()">Create Pairing Code</button>
+    </div>
+
+    <div class="panel">
+        <h2>Active Sessions</h2>
+        <ul id="sessions-list"></ul>
+        <button onclick="fetchSessions()">Refresh Sessions</button>
+    </div>
+
+    <div class="panel">
+        <h2>Log</h2>
+        <div id="log"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

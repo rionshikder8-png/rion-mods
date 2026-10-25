@@ -1,0 +1,8 @@
+fastapi>=0.103.1
+uvicorn[standard]>=0.23.2
+pydantic>=2.4.2
+websockets>=11.0.3
+rich>=13.5.2
+textual>=0.36.0
+pytest>=7.4.2
+httpx>=0.25.0

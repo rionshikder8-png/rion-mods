@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.RionMods" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#0A0A12</item>
+    </style>
+</resources>
